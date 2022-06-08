@@ -14,9 +14,9 @@
       left: 0,
       behavior: "smooth",
     })
-  } else {
+  } else if (window.innerWidth >= 1366){
     window.scrollTo({
-      top: 586,
+      top: 650,
       left: 0,
       behavior: "smooth",
     })
@@ -25,7 +25,7 @@
 
   export const handleScrollSkills = () => {
     window.scrollTo({
-      top: 1194,
+      top: 1400,
       left: 0,
       behavior: "smooth",
     })
@@ -33,7 +33,7 @@
 
   export const handleScrollProyects = () => {
     window.scrollTo({
-      top: 1796,
+      top: 2000,
       left: 0,
       behavior: "smooth",
   })
@@ -41,7 +41,7 @@
 
   export const handleScrollContact = () => {
     window.scrollTo({
-      top: 2538,
+      top: 2700,
       left: 0,
       behavior: "smooth",
   })
