@@ -25,7 +25,7 @@
 
   export const handleScrollSkills = () => {
     window.scrollTo({
-      top: 1340,
+      top: 1330,
       left: 0,
       behavior: "smooth",
     })
