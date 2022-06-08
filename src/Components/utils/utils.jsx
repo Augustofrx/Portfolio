@@ -8,11 +8,19 @@
   }
 
   export const handleScrollAbout = () => {
+  if(window.innerWidth <= 450) {
+    window.scrollTo({
+      top: 720,
+      left: 0,
+      behavior: "smooth",
+    })
+  } else {
     window.scrollTo({
       top: 586,
       left: 0,
       behavior: "smooth",
     })
+  }
   }
 
   export const handleScrollSkills = () => {
