@@ -25,7 +25,7 @@
 
   export const handleScrollSkills = () => {
     window.scrollTo({
-      top: 1320,
+      top: 1340,
       left: 0,
       behavior: "smooth",
     })
@@ -33,7 +33,7 @@
 
   export const handleScrollProyects = () => {
     window.scrollTo({
-      top: 1950,
+      top: 1970,
       left: 0,
       behavior: "smooth",
   })
