@@ -1,0 +1,43 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: -3em;
+}
+
+.navigation li {
+  user-select: none;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  color: rgb(39, 39, 39);
+  margin-bottom: 1em;
+  font-size: 22px;
+  backdrop-filter: blur(15px);
+  background-color: rgba(70, 232, 235);
+  text-align: center;
+  width: 3em;
+  height: 1.5em;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: 0.5s;
+  user-select: none;
+}
+
+.homeIcon {
+  pointer-events: none;
+}
+
+
+.navigation li:hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  box-shadow: 0px 6px 10px rgba(70, 232, 235);
+}
+
+@media (max-width: 450px) {
+  .navigation {
+    display: none;
+  }
+}

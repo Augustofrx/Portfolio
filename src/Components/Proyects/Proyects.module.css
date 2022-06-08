@@ -1,0 +1,191 @@
+.generalContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgb(6, 6, 6) 0px,
+      rgb(6, 6, 6) 1px,
+      transparent 1px,
+      transparent 21px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgb(6, 6, 6) 0px,
+      rgb(6, 6, 6) 1px,
+      transparent 1px,
+      transparent 21px
+    ),
+    linear-gradient(90deg, hsl(144, 0%, 9%), hsl(144, 0%, 9%));
+}
+
+.title {
+  position: relative;
+  bottom: 0.75em;
+  color: #171717;
+  font-size: 31px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.1em;
+  margin-top: 0.4em;
+  width: 8em;
+  height: 1em;
+  margin: 0em;
+  background-color: rgba(70, 232, 235);
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.cardsContainer {
+  height: 80%;
+  width: 85%;
+  margin-bottom: 2.5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cardsContainer a {
+text-decoration: none;
+color: #171717;
+}
+
+.cardsContainer a:visited {
+    text-decoration: none;
+    color: #171717;
+    }
+
+
+.proyect1,
+.proyect2,
+.proyect3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.proyect1 img,
+.proyect2 img, .proyect3 img {
+  width: 330px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: left;
+  box-shadow: 2px 4px 6px #171717;
+}
+
+.proyect3 img {
+  object-position: center;
+}
+
+.proyect1 div,
+.proyect2 div,
+.proyect3 div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.proyect1 h2, .proyect2 h2, .proyect3 h2 {
+    color: white;
+    font-family: 'Dela Gothic One', cursive;
+    font-weight: 400;
+} 
+
+.proyect1 button,
+.proyect2 button,
+.proyect3 button {
+  margin: 2em;
+  color: #171717;
+  font-size: 16px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: none;
+  padding: .2em;
+  width: 150px;
+  font-weight: 600;
+  background-color: rgba(70, 232, 235);
+  cursor: pointer;
+  transition: .25s;
+  font-family: 'Dela Gothic One', cursive;
+  font-weight: 400;
+}
+
+.proyect1 button:hover,
+.proyect2 button:hover,
+.proyect3 button:hover {
+    transform: scale(1.1);
+}
+
+.buttonsDivs {
+background-color: #000000c1;
+width: 330px;
+height: 300px;
+position: absolute; 
+opacity: 0;
+transition: opacity 0.25s;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.buttonsDivs > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.buttonsDivs:hover {
+    opacity: 1;
+}
+
+.buttonsDivs:hover > * {
+    transform: translateY(0);
+}
+
+@media (max-width: 450px) {
+  .cardsContainer {
+    flex-direction: column;
+  }
+
+  .proyect1 img,
+.proyect2 img, .proyect3 img {
+  width: 300px;
+  height: 150px;
+}
+.proyect1 img{
+  object-position: top;
+}
+.buttonsDivs {
+  width: 300px;
+  height: 150px;
+}
+
+.proyect1 button,
+.proyect2 button,
+.proyect3 button  {
+  position: relative;
+  bottom: 1em;
+  margin: 1em;
+  font-size: 12px;
+  padding: .2em;
+  width: 100px;
+
+}
+
+.proyect1 h2, .proyect2 h2, .proyect3 h2 {
+  color: white;
+  font-family: 'Dela Gothic One', cursive;
+  font-weight: 400;
+  font-size: 20px;
+} 
+
+}
