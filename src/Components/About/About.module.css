@@ -224,7 +224,7 @@ filter: contrast(110%);
   }
 
   .description {
-    top: .6em;
+    top: 0em;
     font-size: 22px;
   }
 }
