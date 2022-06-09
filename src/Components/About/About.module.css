@@ -217,3 +217,9 @@ filter: contrast(110%);
     margin: 0em;
   }
 }
+
+@media (min-width: 1366px) {
+  .videoAndTitleCont {
+    right: 8.5em;
+  }
+}

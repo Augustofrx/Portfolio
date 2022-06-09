@@ -192,3 +192,9 @@
   height: 14em;
  }
 }
+
+@media (min-width: 1366px) {
+  .text {
+    left: 15em;
+  }
+}
