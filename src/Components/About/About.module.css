@@ -221,7 +221,7 @@ filter: contrast(110%);
 @media (min-width: 1366px) {
   .videoAndTitleCont {
     right: 8.5em;
-    top: 10.5em;
+    margin-top: 10.5em;
   }
 
   .description {
