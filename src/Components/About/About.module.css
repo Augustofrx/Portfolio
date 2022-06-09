@@ -222,4 +222,9 @@ filter: contrast(110%);
   .videoAndTitleCont {
     right: 8.5em;
   }
+
+  .description {
+    top: .6em;
+    font-size: 22px;
+  }
 }
