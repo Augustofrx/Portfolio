@@ -198,3 +198,31 @@
     left: 15em;
   }
 }
+
+@media (min-width: 1920px) {
+.text {
+  left: 21em;
+}
+.text h1 {
+  font-size: 160px;
+}
+.text h3 {
+  font-size: 32px;
+}
+.scrollCont {
+  top: 20em;
+}
+.scrollCont h4 {
+  font-size: 24px;
+}
+
+.PortfolioBackgroundImg {
+  width: 14em;
+  height: 14em;
+}
+
+.effectContainer {
+  bottom: 19em;
+  left: 9em;
+}
+}
