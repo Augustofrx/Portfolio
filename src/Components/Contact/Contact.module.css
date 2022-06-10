@@ -181,3 +181,26 @@
     left: 19em;
   }
 }
+
+
+@media(min-width: 1920px) {
+  .networkLogos {
+    margin-top: 8em;
+  }
+  .formDiv {
+    margin-top: 10em;
+  }
+
+  .nameInput,
+  .emailInput {
+    width: 365px;
+  }
+
+  .message {
+    width: 765px;
+  }
+
+  .sendButton {
+    left: 52.5em;
+  }
+}
