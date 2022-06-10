@@ -22,7 +22,7 @@
     })
   } else if (window.innerWidth >= 1920) {
     window.scrollTo({
-      top: 915,
+      top: 946,
       left: 0,
       behavior: "smooth",
     })
