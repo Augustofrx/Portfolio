@@ -63,7 +63,7 @@ export const handleScrollProyects = () => {
 export const handleScrollContact = () => {
   if (window.innerWidth >= 1920) {
     window.scrollTo({
-      top: 3644,
+      top: 3749,
       left: 0,
       behavior: "smooth",
     });
