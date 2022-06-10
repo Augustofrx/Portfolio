@@ -189,3 +189,16 @@ flex-direction: column;
 } 
 
 }
+
+@media (min-width: 1920px) {
+  .proyect1 img,
+  .proyect2 img, .proyect3 img {
+    width: 500px;
+    height: 300px;
+    object-position: top;
+  }
+  .buttonsDivs {
+    width: 500px;
+    height: 300px;
+  }
+} 

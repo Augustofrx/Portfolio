@@ -229,3 +229,18 @@ filter: contrast(110%);
     font-size: 22px;
   }
 }
+
+@media (min-width: 1920px) {
+.description{
+  font-size: 30px;
+  top: 1em;
+}
+.phButton {
+  top: 2.5em;
+  left: 3em;
+}
+.videoAndTitleCont {
+right: 23.5em;
+margin-top: 22.5em;
+}
+}
