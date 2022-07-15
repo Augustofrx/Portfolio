@@ -231,6 +231,25 @@ filter: contrast(110%);
 }
 
 @media (min-width: 1920px) {
+.photographiesContainer {
+  height: 790px;
+  width: 1520px;
+}
+.photographies {
+  top: 6em;
+}
+.photographies img {
+  width: 430px;
+  height: 630px;
+}
+
+.closeBtn {
+  border-radius: 5px;
+  padding: .5em, .8em;
+  right: 1em;
+  top: 1em;
+}
+
 .description{
   font-size: 30px;
   top: 1em;
