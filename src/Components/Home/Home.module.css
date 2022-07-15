@@ -1,246 +1,228 @@
-.container {
-  background-color: #3e0a79;
-  height: 100vh;
-  margin: 0;
+.generalDiv {
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgb(6, 6, 6) 0px,
+      rgb(6, 6, 6) 1px,
+      transparent 1px,
+      transparent 21px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgb(6, 6, 6) 0px,
+      rgb(6, 6, 6) 1px,
+      transparent 1px,
+      transparent 21px
+    ),
+    linear-gradient(90deg, hsl(144, 0%, 9%), hsl(144, 0%, 9%));
+  height: 100%;
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
-}
-
-.titleContainer {
-  display: flex;
-  justify-content: center;
-  width: 30%;
-  margin: 0;
-}
-
-.container h1 {
-  position: relative;
-  bottom: 0.2em;
-  right: 1.1em;
-  margin: 0;
-  background: linear-gradient(90deg, #56a8ff 0%, #f36aff 25%, #f1e454 100%);
-  padding: 0.5em 0;
-  font-size: 40px;
-  width: 5em;
-  font-weight: 700;
-  font-family: "Ubuntu", sans-serif;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.selectTokenDiv {
-  width: 50%;
-  height: 85%;
-  margin-top: 4em;
-  display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  text-align: center;
+}
+
+.text {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  right: 19em;
-  backdrop-filter: 3px;
-  border-radius: 0.5em;
+  left: 14em;
+  top: 4em;
+  user-select: none;
 }
 
-.selectTokenLabel {
-  color: rgb(225, 225, 225);
+.text h1 {
+  position: absolute;
+  bottom: 0.23em;
+  color:rgba(70, 232, 235);
+  font-size: 114px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  width: 7em;
+  margin: 0.2em;
+  padding: 0;
+  text-shadow: 2px 5px 5px black;
+}
+
+
+.text h3 {
   position: relative;
-  right: 8em;
-  bottom: 4.8em;
-  z-index: 2;
-  font-weight: 500;
-  font-family: "Ubuntu", sans-serif;
+   top: .8em;
+  right: 0.05em;
   font-size: 22px;
-}
-
-.selectToken {
-  background-color: #543b7dc9;
-  backdrop-filter: blur(3px);
-  border: none;
-  color: white;
-  height: 3em;
-  width: 19em;
-  left: 4.05em;
-  align-items: center;
-  margin: 1em 0 0 0;
-  border-radius: 0.5rem;
-  padding: 8px 12px;
-  position: relative;
-  bottom: 10em;
-  font-weight: 500;
-  font-size: 16px;
-  font-family: "Ubuntu", sans-serif;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  outline: none;
-}
-
-.selectToken option {
-  font-size: 14px;
-}
-
-.priceContainer {
-  width: 18.5em;
-  margin-right: .5em;
-  height: 3em;
-  text-align: center;
-  border-radius: .5em;
-  background-color: #ffffff28;
-  font-family: "Ubuntu", sans-serif;
-  color: white;
-  position: absolute;
-  top: 9em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.priceContainer h3 {
-  font-size: 14px;
-}
-
-.selectTokenDiv ion-icon {
-  color: white;
-  position: absolute;
-  z-index: 3;
-  top: 4.6em;
-  right: 8.5em;
-}
-
-.fullCashInput {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Symbol {
-  width: 8em;
-  height: 3.63em;
-  right: 1em;
-  top: 4.001em;
-  position: relative;
-  z-index: 3;
+  font-family: 'Dela Gothic One', cursive;
+  font-weight: 300;
   margin: 0;
-  border-top-left-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
-  background-color: #4a3171c9;
-  color: #ffffff;
-  backdrop-filter: blur(3px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  width: 24em;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 5px 4px black;
 }
 
-.Symbol span,
-.Symbol img {
-  margin: 0;
-}
-
-.Symbol img {
-  width: 1.5em;
-  height: 1.5em;
-  position: relative;
-  right: 2.2em;
-}
-
-.Symbol span {
-  margin-left: 1.2em;
-  position: absolute;
-  font-size: 28px;
-  font-weight: 500;
-  font-family: "Ubuntu", sans-serif;
-}
-.cashLabel {
-  color: rgb(225, 225, 225);
-  position: relative;
-  right: 13em;
-  bottom: 1em;
-  z-index: 2;
-  font-weight: 500;
-  font-family: "Ubuntu", sans-serif;
+.text h4 {
   font-size: 16px;
+  font-family: 'Dela Gothic One', cursive;
+  font-weight: 300;
+  width: 3.5em;
+  margin: 0;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 5px 4px black;
+  user-select: none;
 }
 
-.cashInput {
-  text-align: center;
-  border: none;
-  margin: 0;
-  background-color: #4a3171c9;
-  backdrop-filter: blur(3px);
-  border-radius: 0.5rem;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  font-size: 16px;
-  font-weight: 700;
-  border: none;
-  height: 3.5em;
-  width: 20em;
-  position: relative;
-  top: 4em;
-  appearance: text;
+.scrollCont {
+  width: 3.5em;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column; 
+ position: relative;
+  top: 10em;
+  right: 0.05em;
   color: white;
-  text-align: end;
-  padding-right: 1em;
-  right: 1em;
-  outline: none;
-  caret-color: aqua;
-}
-
-.cashInput::placeholder {
-  font-size: 20px;
-  font-weight: 700;
-  font-family: "Ubuntu", sans-serif;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.depositarBtn {
-  position: relative;
-  top: 4em;
-  right: 1.1em;
-  width: 29.2em;
-  height: 3em;
-  border-radius: .5em;
-  border: none;
-  font-weight: 700;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
-  background-color: #05e6c4;
-  color: #3e0a79;
-  transition: .2s;
-}
-
-
-.depositarBtn:hover {
-  background-color: #05e6c4cb;
   cursor: pointer;
+  animation: scrollTransition 6s;
 }
 
-@media (min-width: 1900px) {
-  .selectTokenDiv {
-    right: 30em; 
+.text h4:hover {
+  color:rgba(70, 232, 235);
+}
+
+
+
+@keyframes scrollTransition {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
+.effectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2em;
+  animation: imganimation 5000ms;
+  position: relative;
+  bottom: 12em;
+  left: 7em;
+   
+}
+
+.PortfolioBackgroundImg {
+  width: 10em;
+  height: 10em;
+  border-radius: 9999px;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(70, 232, 235, 0.7) 0%,
+    rgb(30, 173, 175, 0.7) 25%,
+    rgba(70, 232, 235, 0.7) 51%,
+    rgb(45, 151, 153, 0.7) 100%
+  );
+  z-index: 2;
+
+}
+
+
+@keyframes imganimation {
+  0%{
+    opacity: 0;
+  }
+  24%{
+    opacity: 0;
+  }
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}
+
+.PortfolioBackgroundImg img {
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+  position: relative;
+  margin: 0;
+  bottom: 0.7em;
+  left: 0.2em;
+  filter: brightness(130%);
+}
+
+
+@media (max-width: 450px) {
+  .text {
+    left: 8em;
+    top: 0em;
+  }
+  .text h1 {
+    width: 7em;
+    font-size: 50px;
   }
 
-  .selectTokenDiv ion-icon {
-    top: 12.7em;
-    right: 17.5em;
+  .text h3 {
+    top: 3em;
+    right: 0.05em;
+    font-size: 12px;
+    width: 24em;
   }
 
-  .Symbol {
-    right: 15px;
+  .scrollCont {
+    top: 15em;
   }
 
-  .priceContainer  {
-top: 20em;
+ .effectContainer {
+ left: -7.8em;
+ bottom: 13em;
+ }  
+
+ .PortfolioBackgroundImg {
+  width: 14em;
+  height: 14em;
+ }
+}
+
+@media (min-width: 1366px) {
+  .text {
+    left: 15em;
   }
+}
+
+@media (min-width: 1920px) {
+.text {
+  left: 22em;
+}
+.text h1 {
+  font-size: 160px;
+}
+.text h3 {
+  font-size: 32px;
+}
+.scrollCont {
+  top: 20em;
+}
+.scrollCont h4 {
+  font-size: 24px;
+}
+
+.PortfolioBackgroundImg {
+  width: 14em;
+  height: 14em;
+}
+
+.effectContainer {
+  bottom: 19em;
+  left: 9em;
+}
 }
