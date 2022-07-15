@@ -7,24 +7,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgb(99, 220, 241);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: rgb(10, 139, 141);
-}
-
-ion-icon {
-  pointer-events: none;
- }

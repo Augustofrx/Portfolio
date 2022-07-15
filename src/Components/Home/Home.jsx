@@ -1,43 +1,70 @@
 import React from "react";
-import { handleScrollAbout } from "../utils/utils";
-import PortfolioBackground from "../../Assets/PortfolioBackground.png";
-import NavBar from "../Navbar/NavBar";
-import About from "../About/About";
-import Skills from "../Skills/Skills";
-import Proyects from "../Proyects/Proyects"
-import Contact from "../Contact/Contact";
 import styles from "./Home.module.css";
-import "animate.css";
+import { CryptoFetch } from "../CryptoFetch/CryptoFetch";
+import { NavBar } from "../NavBar/NavBar";
+import USDTLOGO from "../../Assets/usdt-logo.png";
+import { useState } from "react";
+import { useEffect } from "react";
+import { useCallback } from "react";
+import axios from "axios";
 
 export default function Home() {
+  const [token, setToken] = useState("WETH");
+  const [price, setPrice] = useState(0);
+  const selectHandleChange = (e) => {
+    setToken(e.target.value);
+  };
 
- 
+  const tokenPrice = useCallback((tokenId) => {
+    axios
+      .get(
+        `https://api.0x.org/swap/v1/price?sellToken=${tokenId}&buyToken=USDT&sellAmount=1000000000000000000`
+      )
+      .then((res) => {
+        setPrice(res.data.price);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (token !== null) {
+      tokenPrice(token);
+    }
+  }, [token, tokenPrice]);
+
   return (
-    <>
-    <NavBar/>
-      <div className={styles.generalDiv}>
-        <div className={styles.text}>
-          <h1 class="animate__animated animate__lightSpeedInLeft animate__delay-2s">
-            Augusto Iphar
-          </h1>
-          <h3 class="animate__animated animate__lightSpeedInLeft animate__delay-2s">
-            {"<"} FullStack / Frontend Web Developer /{">"}
-          </h3>
-          <div onClick={handleScrollAbout} className={styles.scrollCont}>
-          <h4>Scroll</h4>
-          <ion-icon name="caret-down-sharp"></ion-icon>
-          </div>
-        </div>
-        <div className={styles.effectContainer}>
-          <div className={styles.PortfolioBackgroundImg}>
-            <img src={PortfolioBackground} alt="BackgroundImg" />
-          </div>
-        </div>
+    <div className={styles.container}>
+      <div className={styles.titleContainer}>
+        <h1>Crypto Challenge</h1>
       </div>
-        <About/>
-        <Skills/>
-        <Proyects/>
-        <Contact/>
-    </>
+      <NavBar />
+      <div className={styles.selectTokenDiv}>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+        <label className={styles.selectTokenLabel} for="selectToken">
+          DEPOSITA EN
+        </label>
+        <select
+          className={styles.selectToken}
+          onChange={selectHandleChange}
+          name="selectToken"
+          id="selectToken"
+        >
+          <CryptoFetch />
+        </select>
+        <div className={styles.priceContainer}>
+          <h3>{price ? "Precio: " + 1/price : "Cargando..."} </h3>
+        </div>
+        <div className={styles.fullCashInput}>
+          <div className={styles.Symbol}>
+            <img src={USDTLOGO} alt="DaiLogo" />
+            <span>USDT</span>
+          </div>
+          <input className={styles.cashInput} placeholder="0.0" type="number" />
+        </div>
+        <label className={styles.cashLabel} htmlFor="">
+          MONTO
+        </label>
+        <button className={styles.depositarBtn}>Depositar</button>
+      </div>
+    </div>
   );
 }

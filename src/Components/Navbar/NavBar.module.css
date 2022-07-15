@@ -1,43 +1,48 @@
-.navigation {
-  position: fixed;
-  top: 0;
-  left: -3em;
+.navContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    top: 1.4em;
+    left: 10.3em;
+    background-color: #ffffff4c;
+    height: 2em;
+    width: 18em;
+    z-index: 3;
+    border-radius: .5em;
 }
 
-.navigation li {
-  user-select: none;
-  position: sticky;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  color: rgb(39, 39, 39);
-  margin-bottom: 1em;
-  font-size: 22px;
-  backdrop-filter: blur(15px);
-  background-color: rgba(70, 232, 235);
-  text-align: center;
-  width: 3em;
-  height: 1.5em;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  transition: 0.5s;
-  user-select: none;
+.depositar button, .favoritos button, .cuenta button {
+    color: rgba(255, 255, 255, 0.785);
+    font-weight: 500;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    transition: .2s;
+    background-color: transparent;
+    border: none;
+    border-radius: .5em;
+    width: 6em;
+    height: 1.5em;
+    margin: .2em;
+    text-align: center;
 }
 
-.homeIcon {
-  pointer-events: none;
+.depositar button:hover,  .favoritos button:hover , .cuenta button:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.depositar button:focus, .favoritos button:focus, .cuenta button:focus {
+    background-color: #240c3b9c;
+  
 }
 
 
-.navigation li:hover {
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  box-shadow: 0px 6px 10px rgba(70, 232, 235);
-}
 
-@media (max-width: 450px) {
-  .navigation {
-    display: none;
-  }
+
+@media (min-width: 1900px) { 
+    .navContainer {
+        left: 12em;
+    }
 }
